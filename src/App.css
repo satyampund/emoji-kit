@@ -1,11 +1,9 @@
 .title-container {
-  width: 200px;
+  width: 250px;
   background-color: white;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 15px;
-  margin-top: 20px;
+  margin: 20px auto 50px auto;
   padding: 5px;
   border: 2px solid #545e75;
 }
@@ -14,41 +12,29 @@
   margin: 0;
 }
 
-.main-emoji-container {
-  height: 200px;
-  width: 200px;
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 70px;
-  border-radius: 20px;
-  border: 2px solid #545e75;
-  display: grid;
-  place-content: center;
+.main-emoji-item {
+  font-size: 90px;
 }
 
-.main-emoji-item {
-  font-size: 100px;
+.main-emoji-container {
+  background-color: white;
+  border-radius: 20px !important;
+  border: 2px solid #545e75 !important;
 }
 
 .emoji-container {
-  background-color: white;
-  display: flex;
-  justify-content: space-evenly;
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 70px;
-  cursor: pointer;
-  border-radius: 20px;
-  padding: 5px;
-  border: 2px solid #545e75;
+  width: 80%;
 }
 
 .emoji {
   font-size: 40px;
+  cursor: pointer;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #545e75;
 }
 
 .emoji:hover {
-  transform: scale(1.4);
+  transform: scale(1.1);
 }
