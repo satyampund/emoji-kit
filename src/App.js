@@ -5,6 +5,8 @@ import './App.css'
 function App() {
   const [emoji, setEmoji] = useState('🥺')
   const [emojiColor, setEmojiColor] = useState('white')
+  const [emojiSize, setEmojiSize] = useState(90)
+  const [emojiRotate, setEmojiRotate] = useState(0)
 
   return (
     <>
@@ -17,8 +19,14 @@ function App() {
           <div className="col-md-6">
             <div
               className="main-emoji-container py-3 mx-auto mb-5"
-              style={{ backgroundColor: emojiColor, width: '12rem' }}>
-              <div className="main-emoji-item">{emoji}</div>
+              style={{
+                backgroundColor: emojiColor,
+                width: '12rem',
+                transform: `rotate(${emojiRotate}deg)`,
+              }}>
+              <div className="main-emoji-item" style={{ fontSize: `${emojiSize}px` }}>
+                {emoji}
+              </div>
             </div>
 
             <div className=" row emoji-container mx-auto">
@@ -130,14 +138,27 @@ function App() {
               <h4 className="colors-title">Size</h4>
             </div>
             <div className="size-container mx-auto">
-              <input type="range" className="slider"></input>
+              <input
+                type="range"
+                min="50"
+                max="100"
+                className="slider"
+                onChange={(e) => {
+                  setEmojiSize(e.target.value)
+                }}></input>
             </div>
 
             <div className="colors-title-container">
               <h4 className="colors-title">Rotation</h4>
             </div>
             <div className="size-container mx-auto">
-              <input type="range" className="slider"></input>
+              <input
+                type="range"
+                max="360"
+                className="slider"
+                onChange={(e) => {
+                  setEmojiRotate(e.target.value)
+                }}></input>
             </div>
           </div>
         </div>
