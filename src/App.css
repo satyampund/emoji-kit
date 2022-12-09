@@ -17,7 +17,6 @@
 }
 
 .main-emoji-container {
-  background-color: white;
   border-radius: 20px !important;
   border: 2px solid #545e75 !important;
 }
@@ -37,4 +36,56 @@
 
 .emoji:hover {
   transform: scale(1.1);
+}
+
+.colors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 85%;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 760px) {
+  .colors-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .color-item {
+    margin: 20px 20px 0 20px;
+  }
+}
+
+.color-item {
+  border: 2px solid #545e75;
+  border-radius: 5px;
+  width: 70px;
+  height: 50px;
+}
+
+.color-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.bg-sky {
+  background-color: #648de5;
+}
+
+.bg-green {
+  background-color: #60d394;
+}
+
+.bg-white {
+  background-color: #f7f7ff;
+}
+
+.bg-pink {
+  background-color: #fe6d73;
+}
+
+.bg-purple {
+  background-color: #bdb2ff;
 }

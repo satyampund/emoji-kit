@@ -4,6 +4,7 @@ import './App.css'
 
 function App() {
   const [emoji, setEmoji] = useState('🥺')
+  const [emojiColor, setEmojiColor] = useState('white')
 
   return (
     <>
@@ -14,7 +15,9 @@ function App() {
       <div className="container-fluid text-center">
         <div className="row">
           <div className="col-md-6">
-            <div className="main-emoji-container py-3 mx-auto mb-5" style={{ width: '12rem' }}>
+            <div
+              className="main-emoji-container py-3 mx-auto mb-5"
+              style={{ backgroundColor: emojiColor, width: '12rem' }}>
               <div className="main-emoji-item">{emoji}</div>
             </div>
 
@@ -87,7 +90,39 @@ function App() {
             </div>
           </div>
 
-          <div className="col-md-6">Column</div>
+          <div className="col-md-6">
+            <div className="colors-container mx-auto">
+              <div
+                className="color-item bg-sky"
+                onClick={() => {
+                  setEmojiColor('#648de5')
+                }}></div>
+
+              <div
+                className="color-item bg-green"
+                onClick={() => {
+                  setEmojiColor('#60d394')
+                }}></div>
+
+              <div
+                className="color-item bg-white"
+                onClick={() => {
+                  setEmojiColor('#f7f7ff')
+                }}></div>
+
+              <div
+                className="color-item bg-pink"
+                onClick={() => {
+                  setEmojiColor('#fe6d73')
+                }}></div>
+
+              <div
+                className="color-item bg-purple"
+                onClick={() => {
+                  setEmojiColor('#bdb2ff')
+                }}></div>
+            </div>
+          </div>
         </div>
       </div>
     </>
