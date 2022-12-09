@@ -14,13 +14,10 @@
   font-weight: bolder;
 }
 
-/* .main-emoji-item {
-  font-size: 90px;
-} */
-
 .main-emoji-container {
   border-radius: 20px !important;
   border: 2px solid #545e75 !important;
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .emoji-container {
@@ -34,6 +31,7 @@
   padding: 10px;
   border-radius: 10px;
   border: 1px solid #545e75;
+  box-shadow: 0 14px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .emoji:hover {
