@@ -10,6 +10,8 @@
 
 .title {
   margin: 0;
+  color: #545e75;
+  font-weight: bolder;
 }
 
 .main-emoji-item {
@@ -36,6 +38,20 @@
 
 .emoji:hover {
   transform: scale(1.1);
+}
+
+.colors-title {
+  margin: 0;
+  color: #545e75;
+}
+
+.colors-title-container {
+  background-color: white;
+  padding: 5px;
+  width: 150px;
+  margin: 0px auto 20px auto;
+  border-radius: 10px;
+  border: 1px solid #545e75;
 }
 
 .colors-container {
@@ -88,4 +104,14 @@
 
 .bg-purple {
   background-color: #bdb2ff;
+}
+
+.size-container {
+  width: 85%;
+  margin-bottom: 50px;
+}
+
+.slider {
+  width: 70%;
+  cursor: pointer;
 }

@@ -91,6 +91,9 @@ function App() {
           </div>
 
           <div className="col-md-6">
+            <div className="colors-title-container">
+              <h4 className="colors-title">Colors</h4>
+            </div>
             <div className="colors-container mx-auto">
               <div
                 className="color-item bg-sky"
@@ -121,6 +124,20 @@ function App() {
                 onClick={() => {
                   setEmojiColor('#bdb2ff')
                 }}></div>
+            </div>
+
+            <div className="colors-title-container">
+              <h4 className="colors-title">Size</h4>
+            </div>
+            <div className="size-container mx-auto">
+              <input type="range" className="slider"></input>
+            </div>
+
+            <div className="colors-title-container">
+              <h4 className="colors-title">Rotation</h4>
+            </div>
+            <div className="size-container mx-auto">
+              <input type="range" className="slider"></input>
             </div>
           </div>
         </div>
