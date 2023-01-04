@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import './App.css'
+import './App.css';
 
 function App() {
-  const [emoji, setEmoji] = useState('🥺')
-  const [emojiColor, setEmojiColor] = useState('white')
-  const [emojiSize, setEmojiSize] = useState(90)
-  const [emojiRotate, setEmojiRotate] = useState(0)
+  const [emoji, setEmoji] = useState('🥺');
+  const [emojiColor, setEmojiColor] = useState('white');
+  const [emojiSize, setEmojiSize] = useState(90);
+  const [emojiRotate, setEmojiRotate] = useState(0);
 
   return (
     <>
@@ -33,7 +33,7 @@ function App() {
               <div
                 className="col-lg-2 emoji mx-md-3 mb-4"
                 onClick={() => {
-                  setEmoji('🥺')
+                  setEmoji('🥺');
                 }}>
                 🥺
               </div>
@@ -41,7 +41,7 @@ function App() {
               <div
                 className="col-lg-2 emoji mx-md-3 mb-4"
                 onClick={() => {
-                  setEmoji('🎁')
+                  setEmoji('🎁');
                 }}>
                 🎁
               </div>
@@ -49,7 +49,7 @@ function App() {
               <div
                 className="col-lg-2  emoji mx-md-3 mb-4"
                 onClick={() => {
-                  setEmoji('🎯')
+                  setEmoji('🎯');
                 }}>
                 🎯
               </div>
@@ -57,7 +57,7 @@ function App() {
               <div
                 className="col-lg-2 emoji mx-md-3 mb-4"
                 onClick={() => {
-                  setEmoji('👨‍🎓')
+                  setEmoji('👨‍🎓');
                 }}>
                 👨‍🎓
               </div>
@@ -67,7 +67,7 @@ function App() {
               <div
                 className="col-lg-2 emoji mx-md-3 mb-4"
                 onClick={() => {
-                  setEmoji('🎈')
+                  setEmoji('🎈');
                 }}>
                 🎈
               </div>
@@ -75,7 +75,7 @@ function App() {
               <div
                 className="col-lg-2 emoji mx-md-3 mb-4"
                 onClick={() => {
-                  setEmoji('🥇')
+                  setEmoji('🥇');
                 }}>
                 🥇
               </div>
@@ -83,7 +83,7 @@ function App() {
               <div
                 className="col-lg-2 emoji mx-md-3 mb-4"
                 onClick={() => {
-                  setEmoji('💻')
+                  setEmoji('💻');
                 }}>
                 💻
               </div>
@@ -91,14 +91,14 @@ function App() {
               <div
                 className="col-lg-2 emoji mx-md-3 mb-4"
                 onClick={() => {
-                  setEmoji('🥥')
+                  setEmoji('🥥');
                 }}>
                 🥥
               </div>
             </div>
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mt-4">
             <div className="colors-title-container">
               <h4 className="colors-title">Colors</h4>
             </div>
@@ -106,31 +106,31 @@ function App() {
               <div
                 className="color-item bg-sky"
                 onClick={() => {
-                  setEmojiColor('#648de5')
+                  setEmojiColor('#648de5');
                 }}></div>
 
               <div
                 className="color-item bg-green"
                 onClick={() => {
-                  setEmojiColor('#60d394')
+                  setEmojiColor('#60d394');
                 }}></div>
 
               <div
                 className="color-item bg-white"
                 onClick={() => {
-                  setEmojiColor('#f7f7ff')
+                  setEmojiColor('#f7f7ff');
                 }}></div>
 
               <div
                 className="color-item bg-pink"
                 onClick={() => {
-                  setEmojiColor('#fe6d73')
+                  setEmojiColor('#fe6d73');
                 }}></div>
 
               <div
                 className="color-item bg-purple"
                 onClick={() => {
-                  setEmojiColor('#bdb2ff')
+                  setEmojiColor('#bdb2ff');
                 }}></div>
             </div>
 
@@ -144,7 +144,7 @@ function App() {
                 max="100"
                 className="slider"
                 onChange={(e) => {
-                  setEmojiSize(e.target.value)
+                  setEmojiSize(e.target.value);
                 }}></input>
             </div>
 
@@ -157,14 +157,14 @@ function App() {
                 max="360"
                 className="slider"
                 onChange={(e) => {
-                  setEmojiRotate(e.target.value)
+                  setEmojiRotate(e.target.value);
                 }}></input>
             </div>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
