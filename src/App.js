@@ -1,37 +1,34 @@
 import { useState } from 'react';
 
-import './App.css';
+// import './App.css';
 
 function App() {
   const [emoji, setEmoji] = useState('🥺');
-  const [emojiColor, setEmojiColor] = useState('white');
+  const [emojiColor, setEmojiColor] = useState('bg-white');
   const [emojiSize, setEmojiSize] = useState(90);
   const [emojiRotate, setEmojiRotate] = useState(0);
 
   return (
     <>
-      <div className="title-container">
-        <h1 className="title">Emoji Kit</h1>
+      <div className="bg-white w-40 mx-auto text-center my-5 py-1.5 border-2 border-gray-500 rounded-md">
+        <h1 className="text-grey text-3xl">Emoji Kit</h1>
       </div>
 
-      <div className="container-fluid text-center">
-        <div className="row">
-          <div className="col-md-6">
+      <div className="container mx-auto text-center">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-center">
+          <div className="md:w-1/2 ">
             <div
-              className="main-emoji-container py-3 mx-auto mb-5"
+              className={`border-2 border-solid border-gray-600 rounded-2xl py-3 mx-auto mb-9 ${emojiColor}`}
               style={{
-                backgroundColor: emojiColor,
                 width: '12rem',
                 transform: `rotate(${emojiRotate}deg)`,
               }}>
-              <div className="main-emoji-item" style={{ fontSize: `${emojiSize}px` }}>
-                {emoji}
-              </div>
+              <div style={{ fontSize: `${emojiSize}px` }}>{emoji}</div>
             </div>
 
-            <div className=" row emoji-container mx-auto">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-evenly">
               <div
-                className="col-lg-2 emoji mx-md-3 mb-4"
+                className="text-4xl cursor-pointer bg-white p-5 rounded-xl border border-solid border-gray-500 hover:scale-110"
                 onClick={() => {
                   setEmoji('🥺');
                 }}>
@@ -39,7 +36,7 @@ function App() {
               </div>
 
               <div
-                className="col-lg-2 emoji mx-md-3 mb-4"
+                className="text-4xl cursor-pointer bg-white p-5 rounded-xl border border-solid border-gray-500  hover:scale-110"
                 onClick={() => {
                   setEmoji('🎁');
                 }}>
@@ -47,7 +44,7 @@ function App() {
               </div>
 
               <div
-                className="col-lg-2  emoji mx-md-3 mb-4"
+                className="text-4xl cursor-pointer bg-white p-5 rounded-xl border border-solid border-gray-500 hover:scale-110"
                 onClick={() => {
                   setEmoji('🎯');
                 }}>
@@ -55,7 +52,7 @@ function App() {
               </div>
 
               <div
-                className="col-lg-2 emoji mx-md-3 mb-4"
+                className="text-4xl cursor-pointer bg-white p-5 rounded-xl border border-solid border-gray-500 hover:scale-110"
                 onClick={() => {
                   setEmoji('👨‍🎓');
                 }}>
@@ -63,9 +60,9 @@ function App() {
               </div>
             </div>
 
-            <div className=" row emoji-container mx-auto">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-evenly my-10">
               <div
-                className="col-lg-2 emoji mx-md-3 mb-4"
+                className="text-4xl cursor-pointer bg-white p-5 rounded-xl border border-solid border-gray-500 hover:scale-110"
                 onClick={() => {
                   setEmoji('🎈');
                 }}>
@@ -73,7 +70,7 @@ function App() {
               </div>
 
               <div
-                className="col-lg-2 emoji mx-md-3 mb-4"
+                className="text-4xl cursor-pointer bg-white p-5 rounded-xl border border-solid border-gray-500 hover:scale-110"
                 onClick={() => {
                   setEmoji('🥇');
                 }}>
@@ -81,7 +78,7 @@ function App() {
               </div>
 
               <div
-                className="col-lg-2 emoji mx-md-3 mb-4"
+                className="text-4xl cursor-pointer bg-white p-5 rounded-xl border border-solid border-gray-500 hover:scale-110"
                 onClick={() => {
                   setEmoji('💻');
                 }}>
@@ -89,7 +86,7 @@ function App() {
               </div>
 
               <div
-                className="col-lg-2 emoji mx-md-3 mb-4"
+                className="text-4xl cursor-pointer bg-white p-5 rounded-xl border border-solid border-gray-500 hover:scale-110"
                 onClick={() => {
                   setEmoji('🥥');
                 }}>
@@ -98,64 +95,64 @@ function App() {
             </div>
           </div>
 
-          <div className="col-md-6 mt-4">
-            <div className="colors-title-container">
-              <h4 className="colors-title">Colors</h4>
+          <div className="md:w-1/2">
+            <div className="bg-white w-40 mx-auto text-center my-5 py-1 border-2 border-gray-500 rounded-xl">
+              <h4 className="text-gray-600">Colors</h4>
             </div>
-            <div className="colors-container mx-auto">
+            <div className="flex flex-wrap justify-evenly mx-auto mb-50">
               <div
-                className="color-item bg-sky"
+                className="w-20 h-12 border border-solid border-gray-500 rounded-lg hover:scale-110 cursor-pointer bg-sky-300"
                 onClick={() => {
-                  setEmojiColor('#648de5');
+                  setEmojiColor('bg-sky-300');
                 }}></div>
 
               <div
-                className="color-item bg-green"
+                className="w-20 h-12 border border-solid border-gray-500 rounded-lg hover:scale-110 cursor-pointer bg-green-300"
                 onClick={() => {
-                  setEmojiColor('#60d394');
+                  setEmojiColor('bg-green-300');
                 }}></div>
 
               <div
-                className="color-item bg-white"
+                className="w-20 h-12 border border-solid border-gray-500 rounded-lg hover:scale-110 cursor-pointer bg-white"
                 onClick={() => {
-                  setEmojiColor('#f7f7ff');
+                  setEmojiColor('bg-white');
                 }}></div>
 
               <div
-                className="color-item bg-pink"
+                className="w-20 h-12 border border-solid border-gray-500 rounded-lg hover:scale-110 cursor-pointer bg-red-300"
                 onClick={() => {
-                  setEmojiColor('#fe6d73');
+                  setEmojiColor('bg-red-300');
                 }}></div>
 
               <div
-                className="color-item bg-purple"
+                className="w-20 h-12 border border-solid border-gray-500 rounded-lg hover:scale-110 cursor-pointer bg-purple-300"
                 onClick={() => {
-                  setEmojiColor('#bdb2ff');
+                  setEmojiColor('bg-purple-300');
                 }}></div>
             </div>
 
-            <div className="colors-title-container">
-              <h4 className="colors-title">Size</h4>
+            <div className="bg-white w-40 mx-auto text-center my-5 py-1 border-2 border-gray-500 rounded-xl">
+              <h4 className="text-gray-600">Size</h4>
             </div>
-            <div className="size-container mx-auto">
+            <div className="w-5/6 mb-5 mx-auto">
               <input
                 type="range"
                 min="50"
                 max="100"
-                className="slider"
+                className="w-4/6 cursor-pointer"
                 onChange={(e) => {
                   setEmojiSize(e.target.value);
                 }}></input>
             </div>
 
-            <div className="colors-title-container">
-              <h4 className="colors-title">Rotation</h4>
+            <div className="bg-white w-40 mx-auto text-center my-5 py-1 border-2 border-gray-500 rounded-xl">
+              <h4 className="text-gray-600">Rotation</h4>
             </div>
-            <div className="size-container mx-auto">
+            <div className="w-5/6 mb-5 mx-auto">
               <input
                 type="range"
                 max="360"
-                className="slider"
+                className="w-4/6 cursor-pointer"
                 onChange={(e) => {
                   setEmojiRotate(e.target.value);
                 }}></input>
