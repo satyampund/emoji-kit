@@ -5,7 +5,7 @@ const EmojiDisplayView = ({ emoji, emojiColor, emojiSize, emojiRotate, setEmoji 
   return (
     <div>
       <div
-        className={`border-2 border-solid border-gray-600 rounded-2xl py-3 mx-auto mb-9 ${emojiColor}`}
+        className={`border-2 border-solid border-gray-600 rounded-2xl py-3 mx-auto shadow-box mb-9 ${emojiColor}`}
         style={{
           width: '12rem',
           transform: `rotate(${emojiRotate}deg)`,

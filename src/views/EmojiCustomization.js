@@ -7,7 +7,7 @@ const EmojiCustomizationView = ({ setEmojiColor, setEmojiSize, setEmojiRotate })
   return (
     <div>
       <Heading title="Colors" />
-      <div className="flex flex-wrap justify-evenly mx-auto mb-50">
+      <div className="flex flex-wrap justify-evenly mx-auto mb-9">
         <ColorBox color="bg-sky-300" setEmojiColor={setEmojiColor} />
         <ColorBox color="bg-green-300" setEmojiColor={setEmojiColor} />
         <ColorBox color="bg-white" setEmojiColor={setEmojiColor} />
